@@ -355,3 +355,26 @@ app.delete("/products/:id", async (req, res) => {
   res.json(products);
 });
 // works the same as above, except we dont have the third arg in splice. So instead of replacing, it just removes it.
+
+// heroku is a great place to "start"
+// move towards amazon AWS after graduation. Microsoft Azure. Google cloud. All these are cheaper than heroku if it has a lot of users.
+
+// DEPLOYMENT***------------------------------------------------------------------
+// make sure it is a git repo! make sure you are on the master branch (can't deploy from feature branch)! use git status to check.
+// command is heroku create appName
+// heroku create products-phoenix-api
+
+// made a git repository on heroku's git
+// https://products-phoenix-api.herokuapp.com/
+
+// git remote -v
+// shows that running create command added another heroku git repo.
+// can push to that instead!
+
+// git push heroku master
+// push master branch to heroku endpoint (heroku git).
+// how does it know to npm i and all that?
+// heroku is smart enough to know that it is a JS application so if package.json is in the ROOT of the repo it will recognize it.
+// it also knows that if there is a GEM file it will be a ruby application.
+// useful command for debugging!
+// heroku logs --tail
